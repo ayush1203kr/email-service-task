@@ -6,11 +6,11 @@ export class EmailService {
   private provider2 = new MockProvider2();
 
   private maxRetries = 3;
-  private retryDelay = 500; // in ms
-  private rateLimit = 5; // max emails per minute
-  private emailsSent: number[] = []; // timestamps in ms
-  private sentEmails = new Map<string, boolean>(); // idempotency
-  private statusMap = new Map<string, string>(); // tracking
+  private retryDelay = 500; 
+  private rateLimit = 5; 
+  private emailsSent: number[] = [];
+  private sentEmails = new Map<string, boolean>(); 
+  private statusMap = new Map<string, string>(); 
 
   private failureCount1 = 0;
   private failureCount2 = 0;
@@ -63,7 +63,7 @@ export class EmailService {
       success = await tryProvider(this.provider1, 'Provider1', () => {
         this.failureCount1++;
         if (this.failureCount1 >= 3) {
-          this.circuitOpenUntil1 = now + 60000; // 1 minute circuit open
+          this.circuitOpenUntil1 = now + 60000; 
           this.failureCount1 = 0;
           console.warn('🔌 Circuit breaker tripped for Provider1');
         }
