@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MockProvider1 = void 0;
 class MockProvider1 {
     async send(email) {
-        // Simulate 70% chance of success
         const isSuccess = Math.random() < 0.7;
         if (!isSuccess) {
             throw new Error('MockProvider1 failed to send email');
