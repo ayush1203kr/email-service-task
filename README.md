@@ -28,7 +28,7 @@ The `EmailService` class is the core of this application, providing the followin
 
 Screencast Explanation of Demo & Code (Video showing your face):
 
-[]
+[https://www.loom.com/share/946540a030d6439abea5ba361f89d44f?sid=9807a599-65e3-4c99-815c-619800b0dbc2]
 This video will walk through the source code, explain the implementation of each feature (retry, fallback, idempotency, rate limiting, circuit breaker, status tracking, queue), and demonstrate the API endpoints in action (e.g., using Postman or curl) while showing your face.
 
 Cloud Deployed Version of the API Endpoint:
