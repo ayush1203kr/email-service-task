@@ -34,6 +34,5 @@ This video will walk through the source code, explain the implementation of each
 
 Cloud Deployed Version of the API Endpoint:
 
-[PASTE YOUR LIVE RENDER URL HERE]
-(e.g., https://email-service-task-27bu.onrender.com)
+[https://email-service-task-27bu.onrender.com]
 This is the live endpoint where the Email Service API is deployed and accessible.
