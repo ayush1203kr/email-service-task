@@ -4,13 +4,13 @@
   "description": "Resilient email sending service using mock providers",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev src/services/providers/index.ts",
-    "test": "jest"
-  },
+  "build": "tsc",
+  "start": "node dist/services/providers/index.js",
+  "test": "jest"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/jest": "^30.0.0",
