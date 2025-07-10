@@ -1,11 +1,7 @@
 import { EmailService } from './EmailService';
 
 describe('EmailService', () => {
-  let emailService: EmailService;
-
-  beforeEach(() => {
-    emailService = new EmailService();
-  });
+  const emailService = new EmailService();
 
   it('should send email successfully', async () => {
     const success = await emailService.sendEmail(
@@ -16,24 +12,24 @@ describe('EmailService', () => {
     expect(success).toBe(true);
   });
 
-  it('should prevent duplicate sends (idempotency)', async () => {
-    const id = 'unique-test-id';
+  it('should skip sending duplicate emails (idempotency)', async () => {
+    const id = 'unique-email-id';
 
-    const firstSend = await emailService.sendEmailWithId(
+    const firstTry = await emailService.sendEmailWithId(
       id,
       'test@example.com',
       'Test Subject',
       'Test Body'
     );
 
-    const secondSend = await emailService.sendEmailWithId(
+    const secondTry = await emailService.sendEmailWithId(
       id,
       'test@example.com',
       'Test Subject',
       'Test Body'
     );
 
-    expect(firstSend).toBe(true);
-    expect(secondSend).toBe(false); // Duplicate should be skipped
+    expect(firstTry).toBe(true);
+    expect(secondTry).toBe(false); // should skip duplicate
   });
 });
