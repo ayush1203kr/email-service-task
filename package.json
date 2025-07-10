@@ -1,14 +1,15 @@
 {
   "name": "email-service-task",
   "version": "1.0.0",
+  "description": "Resilient email sending service using mock providers",
   "main": "index.js",
   "scripts": {
-     "start": "ts-node-dev src/services/providers/index.ts"
+    "start": "ts-node-dev src/services/providers/index.ts",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.12",
